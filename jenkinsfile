@@ -11,13 +11,13 @@ pipeline{
 		stage('Checkout SCM')
 		{
 			steps {
-				checkout SCM
+				checkout scm
 			}
 		}
 		stage('Compile Code')
 		{
 			steps {
-				sh 'chmod +x file1'
+				sh 'chmod +x app.sh'
 			}
 		}
 		stage('Testing')
