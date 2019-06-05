@@ -4,7 +4,7 @@ pipeline{
 		stage('Set up')
 		{
 			steps {
-				cleanWS();
+				cleanWs();
 				sh 'echo setting up my workspace'
 			}
 		}
