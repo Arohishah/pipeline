@@ -1,0 +1,30 @@
+pipeline{
+	agent any;
+	stages{
+		stage('Set up')
+		{
+			steps {
+				cleanWS();
+				sh 'echo setting up my workspace'
+			}
+		}
+		stage('Checkout SCM')
+		{
+			steps {
+				checkout SCM
+			}
+		}
+		stage('Compile Code')
+		{
+			steps {
+				sh 'chmod +x file1'
+			}
+		}
+		stage('Testing')
+		{
+			steps {
+				sh 'cat file2.txt'
+			}
+		}
+	}
+
